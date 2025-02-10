@@ -1,0 +1,86 @@
+@import "./variables.scss";
+@import "./disable.scss";
+
+.mobile-hidden {
+  display: none !important;
+}
+
+body {
+  background-color: $body;
+}
+
+header {
+  .nav-bar {
+    .logo-text {
+      font-size: calc(1.4rem + .9vw);
+      margin-bottom: 0;
+      color: #6e5538;
+
+      span {
+        color: #545454;
+      }
+
+    }
+
+    .burgerIcon {
+      margin-right: 1.25rem; // 46px
+      cursor: pointer;
+
+      .line {
+        width: 1.5rem; // 24px
+        height: 0.1875rem; // 3px
+        border-radius: 0.625rem; // 10px
+        background-color: $primary-gold;
+        margin-bottom: 0.3125rem; // 5px
+        cursor: pointer;
+        transition: 0.5s linear;
+        transform-style: preserve-3d;
+
+        &:first-of-type.open-menu-container {
+          transform: translate3d(0, 0.25rem, 0) rotateZ(45deg); // 4px
+        }
+
+        &:nth-last-of-type(1).open-menu-container {
+          transform: translate3d(0, -0.25rem, 0) rotateZ(-45deg); // -4px
+        }
+
+        &:nth-of-type(2) {
+          &.open-menu-container {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-content {
+    background-color: $primary-gold;
+  }
+}
+
+main {
+  .hero {
+    background-image: url("../images/hero-img.png");
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80%;
+
+    h2.hero-heading {
+      color: $white;
+
+      &:before {
+        content: "Improve our customers’ lives by providing effective solutions.";
+        font-size: 1.15rem;
+      }
+    }
+
+    a.hero-btn {
+      display: block;
+      width: 9rem;
+      color: $primary-navy;
+      background-color: $primary-gold;
+      padding: 1rem 1.5rem;
+    }
+  }
+}

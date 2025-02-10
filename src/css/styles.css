@@ -1,0 +1,135 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.mobile-hidden {
+  display: none !important;
+}
+
+body {
+  background-color: #F5F5F5;
+}
+
+header .nav-bar .logo-text {
+  font-size: calc(1.4rem + 0.9vw);
+  margin-bottom: 0;
+  color: #6e5538;
+}
+header .nav-bar .logo-text span {
+  color: #545454;
+}
+header .nav-bar .burgerIcon {
+  margin-right: 1.25rem;
+  cursor: pointer;
+}
+header .nav-bar .burgerIcon .line {
+  width: 1.5rem;
+  height: 0.1875rem;
+  border-radius: 0.625rem;
+  background-color: #FFB342;
+  margin-bottom: 0.3125rem;
+  cursor: pointer;
+  transition: 0.5s linear;
+  transform-style: preserve-3d;
+}
+header .nav-bar .burgerIcon .line:first-of-type.open-menu-container {
+  transform: translate3d(0, 0.25rem, 0) rotateZ(45deg);
+}
+header .nav-bar .burgerIcon .line:nth-last-of-type(1).open-menu-container {
+  transform: translate3d(0, -0.25rem, 0) rotateZ(-45deg);
+}
+header .nav-bar .burgerIcon .line:nth-of-type(2).open-menu-container {
+  display: none;
+}
+header .nav-content {
+  background-color: #FFB342;
+}
+
+main .hero {
+  background-image: url("../images/hero-img.png");
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 80%;
+}
+main .hero h2.hero-heading {
+  color: #FFFFFF;
+}
+main .hero h2.hero-heading:before {
+  content: "Improve our customers’ lives by providing effective solutions.";
+  font-size: 1.15rem;
+}
+main .hero a.hero-btn {
+  display: block;
+  width: 9rem;
+  color: #1C2752;
+  background-color: #FFB342;
+  padding: 1rem 1.5rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

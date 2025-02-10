@@ -6,6 +6,11 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
@@ -13,95 +18,147 @@
 <body>
 <!--Header-->
 <header>
-    <div class="header-brand">
-        <div class="logo-block">
-            <img src="" alt="">
-            <h1>IronHand</h1>
-        </div>
-        <div class="contact-block">
-            <div class="contact-mail">
-                <div class="mail-img">
+    <!--Only PC-->
+    <!--    <div class="header-brand">-->
+    <!--        <div class="container">-->
+    <!--            <div class="row">-->
+    <!--                <div class="col">-->
+    <!--                    <div class="logo-block">-->
+    <!--                        <img src="" alt="">-->
+    <!--                        <h1>IronHand</h1>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                <div class="col">-->
+    <!--                    <div class="contact-block d-flex flex-row align-items-end gap-2">-->
+    <!--                        <div class="contact-mail">-->
+    <!--                            <div class="mail-img">-->
+    <!--                                <img src="" alt="">-->
+    <!--                            </div>-->
+    <!--                            <div class="contact-text">-->
+    <!--                                <h4>Mail Us</h4>-->
+    <!--                                <p>Info@bluecollar.com</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="contact-call">-->
+    <!--                            <div class="call-img">-->
 
+    <!--                            </div>-->
+    <!--                            <div class="contact-text">-->
+    <!--                                <h4>Call Us</h4>-->
+    <!--                                <p>+42113223232</p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--Mobile+-->
+    <div class="container">
+        <div class="nav-bar my-2">
+            <div class="row">
+                <div class="col-4 d-flex align-items-center">
+                    <div class="burgerIcon">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </div>
-                <div class="contact-text">
-
+                <div class="col-8">
+                    <div class="logo-block-mob d-flex align-items-center">
+                        <div class="logo-img">
+                            <img src="src/images/logo.png" class="img-fluid" alt="">
+                        </div>
+                        <h2 class="logo-text"><span>Iron</span>Hand</h2>
+                    </div>
                 </div>
             </div>
-            <div class="contact-call">
-                <div class="call-img">
-
-                </div>
-                <div class="contact-text">
-
-                </div>
+            <div class="nav-content mobile-hidden">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-item mob-btn-style">
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <!--PC only-->
+                <a href="contact-btn mobile-hidden">
+                    <p>Have Any Questions?</p>
+                </a>
             </div>
-        </div>
-    </div>
-    <div class="nav-bar">
-        <div class="burger-logo-elements hidden">
-            <div class="burgerIcon">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <div class="burgerText">
-                <p>Menu</p>
-            </div>
-        </div>
-        <div class="nav-content">
-            <ul class="nav-items">
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-            </ul>
-            <a href="contact-btn">
-                <p>Have Any Questions?</p>
-            </a>
         </div>
     </div>
 </header>
 <main>
-<!--Hero-->
-<section class="hero">
+    <!--Hero-->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="hero-heading">
+                        A recognized Leader In Services Industry.
+                    </h2>
+                    <a class="hero-btn" href="#">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--About us-->
+    <section class="about-us">
+        <div class="container">
+            <h3 class="about-us-heading">
+                We provide your Future
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at aut consequuntur cupiditate,
+                doloremque eaque esse eveniet exercitationem ipsam, maiores molestiae natus officiis provident quisquam
+                quos sit unde ut voluptatem?</p>
+            <div class="years-requirements-box">
+                <div class="experience">
+                    <p>35 Years of Experience</p>
+                </div>
+                <div class="requirements">
+                    <ul>
+                        <li>bull</li>
+                        <li>bull</li>
+                        <li>bull</li>
+                        <li>bull</li>
+                        <li>bull</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Services Tabs-->
+    <section class="services-tabs">
 
-</section>
-<!--About us-->
-<section class="about-us">
-
-</section>
-<!--Services Tabs-->
-<section class="services-tabs">
-
-</section>
-<!--Services quick list-->
+    </section>
+    <!--Services quick list-->
     <section class="services-list">
 
     </section>
-<!--Choose Us-->
+    <!--Choose Us-->
     <section class="choose-us">
 
     </section>
-<!--Recent Projects-->
+    <!--Recent Projects-->
     <section class="recent-projects">
 
     </section>
-<!--Contact Us-->
+    <!--Contact Us-->
     <section class="contact-us">
 
     </section>
-<!--Pricing-->
+    <!--Pricing-->
     <section class="pricing">
 
     </section>
