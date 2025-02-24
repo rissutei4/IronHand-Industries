@@ -34,8 +34,8 @@ body {
   line-height: 1.5;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
@@ -67,12 +67,40 @@ select {
     scroll-behavior: auto !important;
   }
 }
+.py-6 {
+  padding-top: 4.35rem !important;
+  padding-bottom: 4.35rem !important;
+}
+
 .mobile-hidden {
   display: none !important;
 }
 
 body {
   background-color: #F5F5F5;
+}
+body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Mulish", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+body p, body a, body ::before {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+}
+body .main-btn {
+  display: inline-block;
+  color: #1C2752;
+  background-color: #FFB342;
+  padding: 0.8rem 0.9rem;
+  border: none;
+  border-radius: 0;
+  text-transform: capitalize;
+}
+body .main-btn:hover, body .main-btn:active {
+  background-color: #FFC368;
 }
 
 header .nav-bar .logo-text {
@@ -116,20 +144,618 @@ main .hero {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 80%;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 main .hero h2.hero-heading {
-  color: #FFFFFF;
+  color: #FFF;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
 }
 main .hero h2.hero-heading:before {
   content: "Improve our customers’ lives by providing effective solutions.";
-  font-size: 1.15rem;
-}
-main .hero a.hero-btn {
+  font-size: 1.12rem;
+  margin-bottom: 1rem;
   display: block;
-  width: 9rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+}
+main .about-us .img-block {
+  width: 100%;
+  max-height: 320px;
+  margin-bottom: 2rem;
+}
+main .about-us h3.about-us-heading {
   color: #1C2752;
+  margin-bottom: 10px;
+}
+main .about-us p {
+  color: #7E7E7E;
+  line-height: 1.688rem;
+  margin-bottom: 0.625rem;
+}
+main .about-us p:last-of-type {
+  margin-bottom: 2rem;
+}
+main .about-us .years-requirements-box .experience {
+  display: flex;
+  justify-content: center;
+  background: #eaeaea;
+  text-align: center;
+  padding: 1rem 0;
+}
+main .about-us .years-requirements-box .experience p {
+  color: #1C2752;
+  margin-bottom: 0;
+}
+main .about-us .years-requirements-box .experience span {
+  display: block;
+  color: #FFB342;
+  font-size: 3rem;
+}
+main .about-us .years-requirements-box .requirements {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  background: #FFFFFE;
+}
+main .about-us .years-requirements-box .requirements ul {
+  list-style-type: "-";
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 2.5rem;
+}
+main .about-us .years-requirements-box .requirements ul li {
+  color: #7E7E7E;
+  text-align: center;
+}
+main .services-tabs .background {
   background-color: #FFB342;
-  padding: 1rem 1.5rem;
+  position: relative;
+  padding-bottom: 80% !important;
+}
+main .services-tabs .background h3 {
+  color: #1C2752;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+main .services-tabs .background h3:before {
+  content: "What we offer";
+  font-size: 1.12rem;
+  display: block;
+  width: 50%;
+  margin: 0 0 1rem;
+  text-align: start;
+  background: #F5F5F5;
+}
+main .services-tabs .background p {
+  color: #1C2752;
+}
+main .services-tabs .stick-out {
+  margin-top: -65%;
+  position: relative;
+  z-index: 10;
+}
+main .services-tabs .stick-out .accordion-item {
+  border: none;
+  border-radius: 0;
+}
+main .services-tabs .stick-out .accordion-button {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #1C2752;
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+main .services-tabs .stick-out .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #1C2752;
+}
+main .services-tabs .stick-out .accordion-button:focus {
+  box-shadow: none;
+}
+main .services-tabs .stick-out .accordion-body .tab-img {
+  margin-bottom: 1.5rem;
+}
+main .services-tabs .stick-out .accordion-body .tab-img img {
+  max-width: 100%;
+  max-height: 240px;
+}
+main .services-tabs .stick-out .accordion-body .tab-content h3 {
+  color: #1C2752;
+  margin-bottom: 0.5rem;
+}
+main .services-tabs .stick-out .accordion-body .tab-content p {
+  color: #7E7E7E;
+  margin-bottom: 1.5rem;
+}
+main .services-list h3 {
+  color: #1C2752;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+main .services-list h3:before {
+  content: "Our specialties";
+  font-size: 1.12rem;
+  margin: 0 0 1rem;
+  display: block;
+  width: 50%;
+  text-align: start;
+  background: #FFF;
+}
+main .services-list p {
+  color: #7E7E7E;
+  line-height: 1.688rem;
+  margin-bottom: 1rem;
+}
+main .services-list .service {
+  background-color: #1C2752;
+  padding: 2rem 1.5rem;
+}
+main .services-list .service img {
+  margin-bottom: 0.5rem;
+}
+main .services-list .service h4 {
+  color: #FFC368;
+  margin-bottom: 0.5rem;
+}
+main .services-list .service p {
+  color: #D2D2D2;
+  margin-bottom: 0.625rem;
+}
+main .services-list .service a {
+  color: #FFF;
+}
+main .choose-us .background {
+  width: 100%;
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 80%;
+  background-image: url("../images/choose-us.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .choose-us .background .colored-container {
+  background-color: rgba(28, 39, 82, 0.86);
+  padding: 1.5rem 1.5rem;
+}
+main .choose-us .background .colored-container ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 0;
+}
+main .choose-us .background .colored-container ul li {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+main .choose-us .background .colored-container ul li span {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .choose-us .background .colored-container ul li span.yellow {
+  width: 30%;
+  border: 0;
+  background-color: #FFB342;
+  color: #1C2752;
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+}
+main .choose-us .background .colored-container ul li span.white {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #FFF;
+  border-left: 0;
+  color: #FFF;
+  width: 70%;
+}
+main .choose-us h3 {
+  color: #1C2752;
+  text-align: start;
+  margin-bottom: 1rem;
+}
+main .choose-us h3:before {
+  content: "why choose us";
+  font-size: 1.12rem;
+  margin: 0 0 1rem;
+  display: block;
+  width: 50%;
+  text-align: start;
+  background: #FFF;
+}
+main .choose-us p {
+  color: #7E7E7E;
+  line-height: 1.688rem;
+  margin-bottom: 1.2rem;
+}
+main .choose-us ul li {
+  list-style-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_555)'%3E%3Cpath d='M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z' fill='%23FFB342'/%3E%3Cpath d='M23 11L13.9 22L10 17.875' stroke='%231C2752' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_555'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+main .choose-us ul li h5 {
+  color: #1C2752;
+  text-transform: capitalize;
+}
+main .recent-projects {
+  background-color: #1C2752;
+}
+main .recent-projects h3 {
+  color: #FFF;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+main .recent-projects h3:before {
+  content: "The Gallery";
+  font-size: 0.8rem;
+  margin: 0 0 1rem;
+  display: block;
+  width: 50%;
+  text-align: start;
+  background: #FFF;
+  color: #1C2752;
+}
+main .recent-projects .card-container {
+  background-color: #FFF;
+  border: 1px solid #D2D2D2;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  height: 100%;
+}
+main .recent-projects .card-container h4 {
+  margin-top: 1rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+main .recent-projects .card-container p {
+  font-size: 0.7rem;
+  color: #7E7E7E;
+}
+main .contact-us .testimonials {
+  margin-bottom: 1.5rem;
+}
+main .contact-us .testimonials .carousel.slide {
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner {
+  padding: 1rem;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid #DDDDDD;
+  padding-bottom: 1rem;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part .person {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part .person img {
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part .person h4 {
+  font-size: 1rem;
+  color: #1C2752;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part .person span {
+  color: #7E7E7E;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .lowr-part {
+  padding: 1rem 0;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .lowr-part p {
+  color: #7E7E7E;
+  font-weight: 600;
+  font-style: italic;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .lowr-part p span {
+  color: #1C2752;
+}
+main .contact-us .testimonials .carousel.slide i {
+  color: #1C2752;
+}
+main .contact-us .testimonials .carousel.slide .btn-boxes {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+main .contact-us .testimonials .carousel.slide .btn-boxes button {
+  position: relative;
+  background: #7E7E7E;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .contact-us .question-box {
+  background-color: #FFB342;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+main .contact-us .question-box h3, main .contact-us .question-box p {
+  color: #1C2752;
+}
+main .contact-us .question-box h3 {
+  font-size: 1.3rem;
+}
+main .contact-us .question-box h3:before {
+  content: "Any Question";
+  font-size: 0.8rem;
+  padding: 0 0.2rem;
+  margin-bottom: 0.2rem;
+  display: block;
+  width: 40%;
+  text-align: start;
+  background: #FFF;
+  color: #1C2752;
+}
+main .contact-us .question-box p {
+  font-size: 0.9rem;
+}
+main .contact-us .question-box .call-box {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main .contact-us .question-box .call-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 2rem;
+  background: #FFF;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+main .contact-us .question-box .call-box p {
+  color: #FFF;
+}
+main .contact-us .appt-form h3 {
+  margin-bottom: 2rem;
+}
+main .contact-us .appt-form h3:before {
+  content: "Meet Us";
+  font-size: 0.8rem;
+  padding: 0 0.2rem;
+  margin-bottom: 0.2rem;
+  display: block;
+  width: 40%;
+  text-align: start;
+  background: #FFF;
+  color: #1C2752;
+}
+main .contact-us .appt-form .form-container {
+  padding: 1.5rem 1rem;
+  background-color: #eaeaea;
+}
+main .contact-us .appt-form .form-container form input, main .contact-us .appt-form .form-container form textarea {
+  background: #FFF;
+  border-radius: 0;
+  border: 1px solid #CCCCCC;
+}
+main .pricing {
+  background-color: #eaeaea;
+}
+main .pricing h3, main .pricing h4 {
+  color: #1C2752;
+}
+main .pricing p {
+  color: #7E7E7E;
+}
+main .pricing .heading-group {
+  margin-bottom: 2rem;
+}
+main .pricing .heading-group h3:before {
+  content: "Price Plan";
+  font-size: 0.8rem;
+  padding: 0 0.2rem;
+  margin-bottom: 0.2rem;
+  display: block;
+  width: 40%;
+  text-align: start;
+  background: #FFF;
+  color: #1C2752;
+}
+main .pricing .price-cols {
+  margin-bottom: 3rem;
+}
+main .pricing .price-cols .price-option {
+  padding: 2rem 1.5rem;
+  background: #F5F5F5;
+}
+main .pricing .price-cols .price-option .price-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #DDDDDD;
+}
+main .pricing .price-cols .price-option .price-heading h4 {
+  width: 50%;
+}
+main .pricing .price-cols .price-option .price-heading h4:before {
+  content: "Price Plan";
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  display: block;
+  text-align: start;
+  color: #1C2752;
+}
+main .pricing .price-cols .price-option .price-heading span {
+  color: #7E7E7E;
+}
+main .pricing .price-cols .price-option ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0;
+}
+main .pricing .price-cols .price-option ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: #7E7E7E;
+}
+main .pricing .price-cols .price-option ul li:before {
+  width: 1rem;
+  height: 1rem;
+  content: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_763)'%3E%3Cpath d='M17.9561 9.47803C17.9561 4.79745 14.1586 1 9.47803 1C4.79745 1 1 4.79745 1 9.47803C1 14.1586 4.79745 17.9561 9.47803 17.9561C14.1586 17.9561 17.9561 14.1586 17.9561 9.47803Z' stroke='%23FFB342' stroke-width='1.5' stroke-miterlimit='10'/%3E%3Cpath d='M13.717 5.9458L7.78242 13.0108L5.23901 10.1848' stroke='%23FFB342' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_763'%3E%3Crect width='19' height='19' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+main .pricing .price-cols .price-option ul .main-btn {
+  text-align: center;
+}
+main .pricing .details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .pricing .details .detail {
+  display: flex;
+}
+main .pricing .details .detail .icon {
+  width: 50%;
+  height: 2rem;
+  padding-top: 0.3rem;
+  margin-right: 0.5rem;
+}
+main .newsletter {
+  background-color: #FFB342;
+}
+main .newsletter h3, main .newsletter p {
+  color: #1C2752;
+}
+main .newsletter h3 {
+  margin-bottom: 0.5rem;
+}
+main .newsletter form .grouped {
+  display: flex;
+  flex-direction: row;
+}
+main .newsletter form .grouped input {
+  border-radius: 0;
+  background: none;
+  border: 2px solid #FFF;
+}
+main .newsletter form .grouped button.alternate {
+  background: #FFF;
+}
+
+footer {
+  background-color: #1C2752;
+}
+footer .company-name a {
+  text-decoration: none;
+  color: #1C2752;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+footer .company-name a img {
+  height: 5rem;
+}
+footer .company-name a h4 {
+  margin-left: 0;
+  font-size: calc(1.4rem + 0.9vw);
+  margin-bottom: 0;
+  color: #FFB342;
+}
+footer .company-name a h4 span {
+  color: #FFF;
+}
+footer .contact-info {
+  color: #FFB342;
+}
+footer .contact-info h6 {
+  text-align: center;
+}
+footer .contact-info .info-piece {
+  margin-bottom: 1rem;
+}
+footer .contact-info .info-piece .icon-box {
+  background: #FFB342;
+  border-radius: 50%;
+  height: 3.25rem;
+  width: 3.25rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #1C2752;
+}
+footer .contact-info .info-piece .icon-box i:before {
+  font-size: 1.5rem !important;
+}
+footer .contact-info .info-piece .text-block {
+  text-align: center;
+  color: #eaeaea;
+  text-decoration: underline;
+}
+footer .contact-info .info-piece .text-block h6 {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+footer .contact-info .info-piece .text-block p {
+  font-size: 1rem;
+}
+footer .social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-bottom: 1px solid #4B557D;
+  padding-bottom: 1rem;
+}
+footer .social-icons a {
+  background: #FFB342;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #1C2752;
+}
+footer .extra-links {
+  padding-top: 1rem;
+}
+footer .extra-links h6 {
+  text-align: center;
+  color: #FFB342;
+  font-size: 1.4rem;
+}
+footer .extra-links ul li {
+  font-size: 1rem;
+  text-align: center;
+}
+footer .extra-links ul li a {
+  color: #eaeaea;
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=styles.css.map */
