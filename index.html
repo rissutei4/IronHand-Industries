@@ -16,85 +16,88 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+    <script defer src="src/js/script.js"></script>
 </head>
 <body>
 <!--Header-->
 <header>
     <!--Only PC-->
-    <!--    <div class="header-brand">-->
-    <!--        <div class="container">-->
-    <!--            <div class="row">-->
-    <!--                <div class="col">-->
-    <!--                    <div class="logo-block">-->
-    <!--                        <img src="" alt="">-->
-    <!--                        <h1>IronHand</h1>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <div class="col">-->
-    <!--                    <div class="contact-block d-flex flex-row align-items-end gap-2">-->
-    <!--                        <div class="contact-mail">-->
-    <!--                            <div class="mail-img">-->
-    <!--                                <img src="" alt="">-->
-    <!--                            </div>-->
-    <!--                            <div class="contact-text">-->
-    <!--                                <h4>Mail Us</h4>-->
-    <!--                                <p>Info@bluecollar.com</p>-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                        <div class="contact-call">-->
-    <!--                            <div class="call-img">-->
-
-    <!--                            </div>-->
-    <!--                            <div class="contact-text">-->
-    <!--                                <h4>Call Us</h4>-->
-    <!--                                <p>+42113223232</p>-->
-    <!--                            </div>-->
-    <!--                        </div>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--            </div>-->
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--Mobile+-->
-    <div class="container">
-        <div class="nav-bar my-2">
+    <div class="header-brand d-none d-md-block">
+        <div class="container">
             <div class="row">
-                <div class="col-4 d-flex align-items-center">
+                <div class="col-md-4">
+                    <div class="logo-block">
+                        <div class="logo-img">
+                            <img src="src/images/logo.png" alt="">
+                        </div>
+                        <h1 class="logo-text"><span>Iron</span>Hand</h1>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="contact-blocks">
+                        <div class="contact-block">
+                            <div class="contact-img">
+                                <i class="bi bi-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Mail Us</h4>
+                                <p>Info@bluecollar.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-block">
+                            <div class="contact-img">
+                                <i class="bi bi-telephone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Call Us</h4>
+                                <p>+42113223232</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Mobile+-->
+    <div class="nav-bar">
+        <div class="container">
+            <div class="row change-bg d-md-none">
+                <div class="col-2">
                     <div class="burgerIcon">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
                 </div>
-                <div class="col-8">
-                    <div class="logo-block-mob d-flex align-items-center">
+                <div class="col-10">
+                    <div class="logo-block-mob">
                         <div class="logo-img">
-                            <img src="src/images/logo.png" class="img-fluid" alt="">
+                            <img src="src/images/logo.png" alt="">
                         </div>
                         <h1 class="logo-text"><span>Iron</span>Hand</h1>
                     </div>
                 </div>
             </div>
-            <div class="nav-content mobile-hidden">
+            <div class="nav-content d-none d-md-flex">
                 <ul class="nav-items">
                     <li class="nav-item">
                         <a href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Home</a>
+                        <a href="#">Pages</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
                     </li>
                     <li class="nav-item mob-btn-style">
                         <a href="#">Contact Us</a>
                     </li>
                 </ul>
                 <!--PC only-->
-                <a href="contact-btn mobile-hidden">
+                <a class="contact-btn d-none d-md-block" href="">
                     <p>Have Any Questions?</p>
                 </a>
             </div>
@@ -106,7 +109,7 @@
     <section class="hero py-6">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-column align-items-center">
+                <div class="col d-flex flex-column align-items-center align-items-md-start">
                     <h2 class="hero-heading">
                         A recognized Leader In Services Industry.
                     </h2>
@@ -119,25 +122,20 @@
     <section class="about-us py-6">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 order-1">
+                <div class="col-12 col-md-6 order-0">
                     <div class="img-block">
                         <img src="src/images/about-man.png" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-12 col-md-6 order-2">
+                <div class="col-12 col-md-6 order-1">
                     <h3 class="about-us-heading">
                         We provide your Future
                     </h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at aut consequuntur
-                        cupiditate,
-                        doloremque eaque esse eveniet exercitationem ipsam, maiores molestiae natus officiis provident
-                        quisquam
-                        quos sit unde ut voluptatem?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at aut consequuntur
-                        cupiditate,
-                        doloremque eaque esse eveniet exercitationem ipsam, maiores molestiae natus officiis provident
-                        quisquam
-                        quos sit unde ut voluptatem?</p>
+                    <p>Bluecollar Electrical services was established in 2008. We are trusted and reliable electricians
+                        who serve customers in the city as well as throughout United States Of America.
+                    </p>
+                    <p>We have extensive experience of domestic and business electrical installations and no job is too
+                        small. Our customers value our professionalism, work ethic and our competitive prices.</p>
                     <div class="years-requirements-box">
                         <div class="row justify-content-center">
                             <div class="col-10 col-md-6">
@@ -220,7 +218,7 @@
                                 <div class="accordion-body">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-12 order-2">
+                                            <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Commercial</h3>
                                                     <p>Electrical & Maintenance Services Ltd offers a full range of
@@ -233,7 +231,7 @@
                                                     <a class="main-btn" href="#">Read More</a>
                                                 </div>
                                             </div>
-                                            <div class="col-12 order-1">
+                                            <div class="col-12 order-0">
                                                 <div class="tab-img">
                                                     <img src="./src/images/services-tabs-1.png" class="img-fluid"
                                                          alt="">
@@ -259,7 +257,7 @@
                                 <div class="accordion-body">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-12 order-2">
+                                            <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Residential</h3>
                                                     <p>Electrical & Maintenance Services Ltd offers a full range of
@@ -268,7 +266,7 @@
                                                     <a class="main-btn" href="#">Read More</a>
                                                 </div>
                                             </div>
-                                            <div class="col-12 order-1">
+                                            <div class="col-12 order-0">
                                                 <div class="tab-img">
                                                     <img src="./src/images/services-tabs-1.png" class="img-fluid"
                                                          alt="">
@@ -294,7 +292,7 @@
                                 <div class="accordion-body">
                                     <div class="container">
                                         <div class="row">
-                                            <div class="col-12 order-2">
+                                            <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Industrial</h3>
                                                     <p>Electrical & Maintenance Services Ltd offers a full range of
@@ -306,7 +304,7 @@
                                                     <a class="main-btn" href="#">Read More</a>
                                                 </div>
                                             </div>
-                                            <div class="col-12 order-1">
+                                            <div class="col-12 order-0">
                                                 <div class="tab-img">
                                                     <img src="./src/images/services-tabs-1.png" class="img-fluid"
                                                          alt="">
@@ -356,8 +354,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur, dolore ducimus
                         laudantium modi molestias. Ad consequatur culpa ea eaque, earum eos laudantium maiores nostrum
                         nulla omnis porro tempore, temporibus.</p>
-                    <div class="row gap-3">
-                        <div class="col-12">
+                    <div class="row gap-3 gap-md-0 special-gap">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-conditioner.png" alt="">
                                 <h4>Responsive</h4>
@@ -367,7 +365,7 @@
                                 <a href="#">Read more</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-electrical.png" alt="">
                                 <h4>Responsive</h4>
@@ -377,7 +375,7 @@
                                 <a href="#">Read more</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-house.png" alt="">
                                 <h4>Responsive</h4>
@@ -387,7 +385,7 @@
                                 <a href="#">Read more</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-security.png" alt="">
                                 <h4>Responsive</h4>
@@ -397,7 +395,7 @@
                                 <a href="#">Read more</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-maintenance.png" alt="">
                                 <h4>Responsive</h4>
@@ -407,7 +405,7 @@
                                 <a href="#">Read more</a>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md-4">
                             <div class="service">
                                 <img src="./src/images/services-extension.png" alt="">
                                 <h4>Responsive</h4>
@@ -443,19 +441,16 @@
                         their needs.</p>
                     <ul>
                         <li><h5>35 Years Experience</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur autem beatae
-                                dicta distinctio eaque illo in, labore laudantium nisi quidem quis, quo, sed sint soluta
-                                suscipit vitae voluptates voluptatum.</p>
+                            <p>Effective communication is the key to success for any business. From our office staff, to
+                                our field.</p>
                         </li>
                         <li><h5>Excellence Certificate</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur autem beatae
-                                dicta distinctio eaque illo in, labore laudantium nisi quidem quis, quo, sed sint soluta
-                                suscipit vitae voluptates voluptatum.</p>
+                            <p>We understand fully that your time is of extreme value. We are committed to meeting
+                                deadlines.</p>
                         </li>
                         <li><h5>Affordable Price</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur autem beatae
-                                dicta distinctio eaque illo in, labore laudantium nisi quidem quis, quo, sed sint soluta
-                                suscipit vitae voluptates voluptatum.</p>
+                            <p>We adhere strictly to the current National Electrical Code, and we conduct regular
+                                in-house sessions.</p>
                         </li>
                     </ul>
                 </div>
@@ -634,62 +629,69 @@
             <div class="row">
                 <div class="col-12">
                     <div class="heading-group">
-                        <h3>Bullshit</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, consequatur consequuntur
-                            doloribus ea eos est expedita molestiae natus nihil optio perferendis quod quos rem
-                            repellendus saepe sed, sint vel voluptatibus.</p>
+                        <h3>Let’s Customize Work With Affordable Price</h3>
+                        <p>This is passionate about delivering growth and the new possibilities in the field of
+                            electrical services. We have extensive experience of domestic and business electrical
+                            installations and no job is too small.</p>
                     </div>
                     <div class="price-cols">
                         <div class="container">
                             <div class="row gap-5">
                                 <div class="col-12 price-option">
                                     <div class="price-heading">
-                                        <h4>$600</h4>
-                                        <span>Per BJ</span>
+                                        <h4>$ 599.00</h4>
+                                        <div class="extras">
+                                            <span>Per Visit Charge</span>
+                                        </div>
                                     </div>
                                     <ul>
                                         <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <a class="main-btn" href="#">Buy Neow</a>
+                                        <li>Distribution Power Systems</li>
+                                        <li>High & Medium Voltages</li>
+                                        <li>Industrial Control Systems</li>
+                                        <li>Switch Installation</li>
+                                        <li>Generator Installations</li>
+                                        <li>Innovative Construction</li>
+                                        <a class="main-btn" href="#">Buy Now</a>
 
                                     </ul>
                                 </div>
                                 <div class="col-12 price-option">
                                     <div class="price-heading">
-                                        <h4>$600</h4>
-                                        <span>Per BJ</span>
+                                        <h4>$ 699.00</h4>
+                                        <div class="extras">
+                                            <span class="badge">Popular</span>
+                                            <span>Per Visit Charge</span>
+                                        </div>
                                     </div>
                                     <ul>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <a class="main-btn" href="#">Buy Neow</a>
+                                        <li>PLC Controls</li>
+                                        <li>Conveyor systems</li>
+                                        <li>Wiring renovations</li>
+                                        <li>Electric Water Heater Repair</li>
+                                        <li>Service And Panel Upgrades</li>
+                                        <li>Efficient Lighting Solutions</li>
+                                        <li>Site lighting</li>
+                                        <a class="main-btn" href="#">Buy Now</a>
 
                                     </ul>
                                 </div>
                                 <div class="col-12 price-option">
                                     <div class="price-heading">
-                                        <h4>$600</h4>
-                                        <span>Per BJ</span>
+                                        <h4>$ 799.00</h4>
+                                        <div class="extras">
+                                            <span>Per Visit Charge</span>
+                                        </div>
                                     </div>
                                     <ul>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <li>Electrical Service</li>
-                                        <a class="main-btn" href="#">Buy Neow</a>
+                                        <li>Cable Tray Installations</li>
+                                        <li>Wiring Upgrades</li>
+                                        <li>Energy Efficient Lighting</li>
+                                        <li>Emergency Generating</li>
+                                        <li>Pools And Hot Tubs</li>
+                                        <li>Air Conditioning Units</li>
+                                        <li>Generating Systems</li>
+                                        <a class="main-btn" href="#">Buy Now</a>
                                     </ul>
                                 </div>
                             </div>
@@ -702,9 +704,9 @@
                             </div>
                             <div class="content">
                                 <h4>Affordable</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad at dicta est,
-                                    excepturi facere illo minus nam natus neque nesciunt nihil nobis pariatur provident
-                                    repellat similique, soluta voluptas voluptatem?</p>
+                                <p>We adhere strictly to the current National Electrical Code, and we conduct regular
+                                    in-house sessions with our technicians to review any code changes and
+                                    applications.</p>
                             </div>
                         </div>
                         <div class="detail">
@@ -712,10 +714,10 @@
                                 <img src="./src/images/tick.svg" class="img-fluid" alt="">
                             </div>
                             <div class="content">
-                                <h4>Affordable</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ad at dicta est,
-                                    excepturi facere illo minus nam natus neque nesciunt nihil nobis pariatur provident
-                                    repellat similique, soluta voluptas voluptatem?</p>
+                                <h4>Fixed Plan</h4>
+                                <p>We understand fully that your time is of extreme value. You will never have to worry
+                                    about waiting around for our trained technicians.24/7 Service Providers Affordable
+                                    Price.</p>
                             </div>
                         </div>
                     </div>

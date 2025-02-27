@@ -2,12 +2,13 @@
 @import "./disable.scss";
 @import "./classes.scss";
 
-.mobile-hidden {
-  display: none !important;
-}
 
 body {
   background-color: $body;
+
+  &.open-menu-container {
+    overflow: hidden;
+  }
 
   h2, h3, h4, h5, h6 {
     font-family: "Mulish", sans-serif;
@@ -38,21 +39,24 @@ body {
 }
 
 header {
+  &.open-menu-container {
+    background: $primary-navy;
+  }
+
   .nav-bar {
-    .logo-text {
-      font-size: calc(1.4rem + .9vw);
-      margin-bottom: 0;
-      color: #6e5538;
-
-      span {
-        color: #545454;
+    .change-bg {
+      &.open-menu-container {
+        background: $primary-navy;
       }
-
     }
 
     .burgerIcon {
-      margin-right: 1.25rem; // 46px
       cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
       .line {
         width: 1.5rem; // 24px
@@ -66,10 +70,12 @@ header {
 
         &:first-of-type.open-menu-container {
           transform: translate3d(0, 0.25rem, 0) rotateZ(45deg); // 4px
+          background-color: $white;
         }
 
         &:nth-last-of-type(1).open-menu-container {
           transform: translate3d(0, -0.25rem, 0) rotateZ(-45deg); // -4px
+          background-color: $white;
         }
 
         &:nth-of-type(2) {
@@ -79,10 +85,57 @@ header {
         }
       }
     }
+
+    .logo-block-mob {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: end;
+
+      .logo-text {
+        font-size: calc(1.4rem + .9vw);
+        margin-bottom: 0;
+        color: #6e5538;
+
+        span {
+          color: #545454;
+        }
+      }
+
+      .logo-img {
+        img {
+          max-width: 100%;
+          height: 4.5rem;
+        }
+      }
+    }
   }
 
   .nav-content {
     background-color: $primary-gold;
+
+    &.open-menu-container {
+      height: 100vh;
+      background: $primary-navy;
+
+      ul.nav-items {
+        margin-top: 3rem;
+        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      a {
+        color: $primary-gold;
+        font-size: 2rem;
+
+        p {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }
 
@@ -121,12 +174,23 @@ main {
     .img-block {
       width: 100%;
       max-height: 320px;
+      overflow: hidden;
       margin-bottom: 2rem;
     }
 
     h3.about-us-heading {
       color: $primary-navy;
       margin-bottom: 10px;
+
+      &:before {
+        content: "Welcome Blue Collar";
+        font-size: 1.12rem;
+        margin: 0 0 1rem;
+        display: block;
+        width: 80%;
+        text-align: start;
+        background: $white;
+      }
     }
 
     p {
@@ -240,11 +304,8 @@ main {
       .accordion-body {
         .tab-img {
           margin-bottom: 1.5rem;
-
-          img {
-            max-width: 100%;
-            max-height: 240px;
-          }
+          max-height: 240px;
+          overflow: hidden;
         }
 
         .tab-content {
@@ -656,7 +717,6 @@ main {
             width: 50%;
 
             &:before {
-              content: "Price Plan";
               font-size: 1rem;
               margin-bottom: 0.4rem;
               display: block;
@@ -665,9 +725,37 @@ main {
             }
           }
 
-          span {
-            color: $medium-gray;
+          .extras {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+
+            span {
+              color: $medium-gray;
+              font-size: 0.9rem;
+
+              &.badge {
+                padding: 0.2rem 0.5rem;
+                color: $primary-navy;
+                background: $primary-gold;
+                border-radius: 0;
+                text-transform: uppercase;
+              }
+            }
           }
+        }
+
+        &:nth-of-type(1) .price-heading h4:before {
+          content: "Basic Plan";
+        }
+
+        &:nth-of-type(2) .price-heading h4:before {
+          content: "Standard Plan";
+        }
+
+        &:nth-of-type(3) .price-heading h4:before {
+          content: "Professional Plan";
         }
 
         ul {
@@ -859,6 +947,159 @@ footer {
           font-weight: 200;
         }
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  header {
+    .header-brand {
+      .logo-block {
+        display: flex;
+        align-items: center;
+
+        .logo-text {
+          font-size: calc(1.4rem + .9vw);
+          margin-bottom: 0;
+          color: #6e5538;
+
+          span {
+            color: #545454;
+          }
+        }
+      }
+
+      .contact-blocks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        height: 100%;
+        gap: 1rem;
+
+        .contact-block {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+
+          h4 {
+            color: $primary-navy;
+            font-size: 1.15rem;
+          }
+
+          p {
+            color: $medium-gray;
+            font-size: 1rem;
+          }
+
+          .contact-img {
+            background: $primary-gold;
+            border-radius: 50%;
+            height: 2.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            color: #1C2752;
+          }
+        }
+      }
+    }
+
+    .nav-bar {
+      .nav-content {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: -3.5rem;
+        padding: 1rem 0.85rem;
+
+        .nav-items {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 1rem;
+
+          .nav-item {
+            a {
+              color: $dark-gray;
+              font-size: 1.2rem;
+
+              &:hover {
+                color: $white;
+              }
+            }
+          }
+        }
+
+        .contact-btn {
+          background-color: $primary-navy;
+          padding: 0.75rem 1rem;
+          color: $white;
+        }
+      }
+    }
+  }
+  main {
+    section.hero {
+      .hero-heading {
+        &:before {
+          padding: 0 0.5rem;
+          text-align: start;
+        }
+      }
+    }
+
+    section.about-us {
+      .img-block {
+        overflow: unset !important;
+        max-height: 100%;
+      }
+
+      h3 {
+        &:before {
+          margin: 0 0 0.2rem !important;
+        }
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .years-requirements-box {
+        .experience {
+          height: 100%;
+
+          span {
+            font-size: 3.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+
+        .requirements {
+          background: transparent;
+          padding-top: 0;
+
+          ul {
+            padding: 0;
+
+            li {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.services-list {
+    .special-gap {
+      gap: 0.5rem 0 !important;
     }
   }
 }

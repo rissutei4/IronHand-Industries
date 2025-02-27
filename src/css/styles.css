@@ -72,12 +72,11 @@ select {
   padding-bottom: 4.35rem !important;
 }
 
-.mobile-hidden {
-  display: none !important;
-}
-
 body {
   background-color: #F5F5F5;
+}
+body.open-menu-container {
+  overflow: hidden;
 }
 body h2, body h3, body h4, body h5, body h6 {
   font-family: "Mulish", sans-serif;
@@ -103,17 +102,19 @@ body .main-btn:hover, body .main-btn:active {
   background-color: #FFC368;
 }
 
-header .nav-bar .logo-text {
-  font-size: calc(1.4rem + 0.9vw);
-  margin-bottom: 0;
-  color: #6e5538;
+header.open-menu-container {
+  background: #1C2752;
 }
-header .nav-bar .logo-text span {
-  color: #545454;
+header .nav-bar .change-bg.open-menu-container {
+  background: #1C2752;
 }
 header .nav-bar .burgerIcon {
-  margin-right: 1.25rem;
   cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 header .nav-bar .burgerIcon .line {
   width: 1.5rem;
@@ -127,15 +128,54 @@ header .nav-bar .burgerIcon .line {
 }
 header .nav-bar .burgerIcon .line:first-of-type.open-menu-container {
   transform: translate3d(0, 0.25rem, 0) rotateZ(45deg);
+  background-color: #FFF;
 }
 header .nav-bar .burgerIcon .line:nth-last-of-type(1).open-menu-container {
   transform: translate3d(0, -0.25rem, 0) rotateZ(-45deg);
+  background-color: #FFF;
 }
 header .nav-bar .burgerIcon .line:nth-of-type(2).open-menu-container {
   display: none;
 }
+header .nav-bar .logo-block-mob {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
+header .nav-bar .logo-block-mob .logo-text {
+  font-size: calc(1.4rem + 0.9vw);
+  margin-bottom: 0;
+  color: #6e5538;
+}
+header .nav-bar .logo-block-mob .logo-text span {
+  color: #545454;
+}
+header .nav-bar .logo-block-mob .logo-img img {
+  max-width: 100%;
+  height: 4.5rem;
+}
 header .nav-content {
   background-color: #FFB342;
+}
+header .nav-content.open-menu-container {
+  height: 100vh;
+  background: #1C2752;
+}
+header .nav-content.open-menu-container ul.nav-items {
+  margin-top: 3rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+header .nav-content.open-menu-container a {
+  color: #FFB342;
+  font-size: 2rem;
+}
+header .nav-content.open-menu-container a p {
+  font-size: 1.5rem;
 }
 
 main .hero {
@@ -167,11 +207,21 @@ main .hero h2.hero-heading:before {
 main .about-us .img-block {
   width: 100%;
   max-height: 320px;
+  overflow: hidden;
   margin-bottom: 2rem;
 }
 main .about-us h3.about-us-heading {
   color: #1C2752;
   margin-bottom: 10px;
+}
+main .about-us h3.about-us-heading:before {
+  content: "Welcome Blue Collar";
+  font-size: 1.12rem;
+  margin: 0 0 1rem;
+  display: block;
+  width: 80%;
+  text-align: start;
+  background: #FFF;
 }
 main .about-us p {
   color: #7E7E7E;
@@ -262,10 +312,8 @@ main .services-tabs .stick-out .accordion-button:focus {
 }
 main .services-tabs .stick-out .accordion-body .tab-img {
   margin-bottom: 1.5rem;
-}
-main .services-tabs .stick-out .accordion-body .tab-img img {
-  max-width: 100%;
   max-height: 240px;
+  overflow: hidden;
 }
 main .services-tabs .stick-out .accordion-body .tab-content h3 {
   color: #1C2752;
@@ -596,15 +644,37 @@ main .pricing .price-cols .price-option .price-heading h4 {
   width: 50%;
 }
 main .pricing .price-cols .price-option .price-heading h4:before {
-  content: "Price Plan";
   font-size: 1rem;
   margin-bottom: 0.4rem;
   display: block;
   text-align: start;
   color: #1C2752;
 }
-main .pricing .price-cols .price-option .price-heading span {
+main .pricing .price-cols .price-option .price-heading .extras {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .pricing .price-cols .price-option .price-heading .extras span {
   color: #7E7E7E;
+  font-size: 0.9rem;
+}
+main .pricing .price-cols .price-option .price-heading .extras span.badge {
+  padding: 0.2rem 0.5rem;
+  color: #1C2752;
+  background: #FFB342;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+main .pricing .price-cols .price-option:nth-of-type(1) .price-heading h4:before {
+  content: "Basic Plan";
+}
+main .pricing .price-cols .price-option:nth-of-type(2) .price-heading h4:before {
+  content: "Standard Plan";
+}
+main .pricing .price-cols .price-option:nth-of-type(3) .price-heading h4:before {
+  content: "Professional Plan";
 }
 main .pricing .price-cols .price-option ul {
   display: flex;
@@ -756,6 +826,115 @@ footer .extra-links ul li {
 footer .extra-links ul li a {
   color: #eaeaea;
   font-weight: 200;
+}
+
+@media only screen and (min-width: 750px) {
+  header .header-brand .logo-block {
+    display: flex;
+    align-items: center;
+  }
+  header .header-brand .logo-block .logo-text {
+    font-size: calc(1.4rem + 0.9vw);
+    margin-bottom: 0;
+    color: #6e5538;
+  }
+  header .header-brand .logo-block .logo-text span {
+    color: #545454;
+  }
+  header .header-brand .contact-blocks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    gap: 1rem;
+  }
+  header .header-brand .contact-blocks .contact-block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  header .header-brand .contact-blocks .contact-block h4 {
+    color: #1C2752;
+    font-size: 1.15rem;
+  }
+  header .header-brand .contact-blocks .contact-block p {
+    color: #7E7E7E;
+    font-size: 1rem;
+  }
+  header .header-brand .contact-blocks .contact-block .contact-img {
+    background: #FFB342;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #1C2752;
+  }
+  header .nav-bar .nav-content {
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: -3.5rem;
+    padding: 1rem 0.85rem;
+  }
+  header .nav-bar .nav-content .nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  header .nav-bar .nav-content .nav-items .nav-item a {
+    color: #222222;
+    font-size: 1.2rem;
+  }
+  header .nav-bar .nav-content .nav-items .nav-item a:hover {
+    color: #FFF;
+  }
+  header .nav-bar .nav-content .contact-btn {
+    background-color: #1C2752;
+    padding: 0.75rem 1rem;
+    color: #FFF;
+  }
+  main section.hero .hero-heading:before {
+    padding: 0 0.5rem;
+    text-align: start;
+  }
+  main section.about-us .img-block {
+    overflow: unset !important;
+    max-height: 100%;
+  }
+  main section.about-us h3:before {
+    margin: 0 0 0.2rem !important;
+  }
+  main section.about-us p {
+    font-size: 0.8rem;
+  }
+  main section.about-us .years-requirements-box .experience {
+    height: 100%;
+  }
+  main section.about-us .years-requirements-box .experience span {
+    font-size: 3.5rem;
+  }
+  main section.about-us .years-requirements-box .experience p {
+    font-size: 1.2rem;
+  }
+  main section.about-us .years-requirements-box .requirements {
+    background: transparent;
+    padding-top: 0;
+  }
+  main section.about-us .years-requirements-box .requirements ul {
+    padding: 0;
+  }
+  main section.about-us .years-requirements-box .requirements ul li {
+    font-size: 0.8rem;
+  }
+  section.services-list .special-gap {
+    gap: 0.5rem 0 !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
