@@ -2,3 +2,15 @@
   padding-top: 4.35rem !important;
   padding-bottom: 4.35rem !important;
 }
+
+@media only screen and (min-width: 750px) {
+  .col-md-4a5 {
+    width: 32%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .col-lg-3a5 {
+    width: 32%;
+  }
+}

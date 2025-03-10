@@ -15,3 +15,16 @@ headerOpenIcon.addEventListener('click', () => {
         line.classList.toggle("open-menu-container");
     });
 })
+window.addEventListener("scroll", function () {
+    // You can adjust the threshold value as needed
+    if (window.scrollY > 100) {
+        headerParent.classList.add("sticky");
+    } else {
+        headerParent.classList.remove("sticky");
+    }
+});
+AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true
+});

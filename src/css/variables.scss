@@ -1,23 +1,27 @@
-// Color Palette
-$body: #F5F5F5;
-$primary-gold: #FFB342;
-$primary-navy: #1C2752;
-$light-navy: #4B557D;
-$white: #FFF;
-$white-darker: #FFFFFE;
-$white-darker-2: #eaeaea;
-$medium-gray: #7E7E7E;
-$new-gray: #F4F4F4;
-$light-gray-1: #EEEEEE;
-$light-gray-2: #D2D2D2;
-$dark-gray: #222222;
-$light-gray-3: #CCCCCC;
-$light-gray-4: #D7D7D7;
-$light-gray-5: #DCDCDC;
-$secondary-gold: #FFC368;
-$light-gray-6: #DDDDDD;
+$body: #F8F8F8;              // Soft off-white background
+$primary-gold: #BFA18A;      // Muted gold with an earthy feel
+$primary-navy: #3B4C63;      // Deep, subdued navy with a hint of gray
+$secondary-navy: #4A5B7E;    // Slightly lighter muted navy for accents
+$light-navy: #6C7A95;        // Soft, light navy for subtle backgrounds
+
+$white: #FFFFFF;
+$white-darker: #F7F7F7;
+$white-darker-2: #EFEFEF;
+
+$medium-gray: #888888;      // Neutral medium gray
+$new-gray: #EAEAEA;         // Gentle, clean gray for broad areas
+$light-gray-1: #D4D4D4;
+$light-gray-2: #BDBDBD;
+$dark-gray: #2C2C2C;
+$light-gray-3: #AAAAAA;
+$light-gray-4: #BBBBBB;
+$light-gray-5: #CFCFCF;
+
+$secondary-gold: #A8947E;    // A deeper, muted gold for emphasis
+$light-gray-6: #DADADA;
+
 $dim-white: rgba(255, 255, 255, 0.2);
-$dim-navy: rgba(28, 39, 82, 0.86);
+$dim-navy: rgba(59, 76, 99, 0.86);
 
 $opacity-40: 40%;
 $opacity-86: 86%;

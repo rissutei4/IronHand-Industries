@@ -1,21 +1,23 @@
-<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>IronHand Electrical Services</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-            rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"/>
     <link rel="stylesheet" href="./src/css/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script defer src="src/js/script.js"></script>
 </head>
 <body>
@@ -28,7 +30,7 @@
                 <div class="col-md-4">
                     <div class="logo-block">
                         <div class="logo-img">
-                            <img src="src/images/logo.png" alt="">
+                            <img src="src/images/logo.png" alt="IronHand Logo">
                         </div>
                         <h1 class="logo-text"><span>Iron</span>Hand</h1>
                     </div>
@@ -40,8 +42,8 @@
                                 <i class="bi bi-envelope"></i>
                             </div>
                             <div class="contact-text">
-                                <h4>Mail Us</h4>
-                                <p>Info@bluecollar.com</p>
+                                <h4>Email Us</h4>
+                                <p>contact@ironhand.com</p>
                             </div>
                         </div>
                         <div class="contact-block">
@@ -50,7 +52,7 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Call Us</h4>
-                                <p>+42113223232</p>
+                                <p>+1 (347) 908-543</p>
                             </div>
                         </div>
                     </div>
@@ -72,7 +74,7 @@
                 <div class="col-10">
                     <div class="logo-block-mob">
                         <div class="logo-img">
-                            <img src="src/images/logo.png" alt="">
+                            <img src="src/images/logo.png" alt="IronHand Logo">
                         </div>
                         <h1 class="logo-text"><span>Iron</span>Hand</h1>
                     </div>
@@ -81,24 +83,24 @@
             <div class="nav-content d-none d-md-flex">
                 <ul class="nav-items">
                     <li class="nav-item">
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">About Us</a>
+                        <a href="#about-us">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Pages</a>
+                        <a href="#services-tabs">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#">Blog</a>
+                        <a href="#recent-projects">Projects</a>
                     </li>
                     <li class="nav-item mob-btn-style">
-                        <a href="#">Contact Us</a>
+                        <a href="#contact-us">Contact Us</a>
                     </li>
                 </ul>
                 <!--PC only-->
-                <a class="contact-btn d-none d-md-block" href="">
-                    <p>Have Any Questions?</p>
+                <a class="contact-btn d-none d-md-block" href="#contact-us">
+                    <span>Have Any Questions?</span>
                 </a>
             </div>
         </div>
@@ -106,36 +108,35 @@
 </header>
 <main>
     <!--Hero-->
-    <section class="hero py-6">
+    <section id="home" class="hero py-6" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col d-flex flex-column align-items-center align-items-md-start">
+                <div class="col-12 col-md-8 d-flex flex-column align-items-center align-items-md-start">
                     <h2 class="hero-heading">
-                        A recognized Leader In Services Industry.
+                        Your Trusted Electrical Service Experts.
                     </h2>
-                    <a class="main-btn" href="#">View Services</a>
+                    <a class="main-btn" href="#services-list">View Our Services</a>
                 </div>
             </div>
         </div>
     </section>
     <!--About us-->
-    <section class="about-us py-6">
+    <section id="about-us" class="about-us py-6" data-aos="fade-right">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6 order-0">
                     <div class="img-block">
-                        <img src="src/images/about-man.png" class="img-fluid" alt="">
+                        <img src="src/images/about-man.png" class="img-fluid" alt="Our Team at Work">
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-1">
                     <h3 class="about-us-heading">
-                        We provide your Future
+                        Empowering Your Future With Reliable Electrical Solutions
                     </h3>
-                    <p>Bluecollar Electrical services was established in 2008. We are trusted and reliable electricians
-                        who serve customers in the city as well as throughout United States Of America.
-                    </p>
-                    <p>We have extensive experience of domestic and business electrical installations and no job is too
-                        small. Our customers value our professionalism, work ethic and our competitive prices.</p>
+                    <p>IronHand Electrical Services was established in 2008. We are a trusted team of licensed
+                        electricians serving residential, commercial, and industrial clients across the nation.</p>
+                    <p>Our commitment to professionalism, integrity, and competitive pricing has made us a leader in the
+                        electrical services industry.</p>
                     <div class="years-requirements-box">
                         <div class="row justify-content-center">
                             <div class="col-10 col-md-6">
@@ -147,11 +148,11 @@
                             <div class="col-10 col-md-6">
                                 <div class="requirements">
                                     <ul>
-                                        <li>For all your system requirements</li>
-                                        <li>All work undertaken by qualified</li>
-                                        <li>Experienced office staff on hand</li>
-                                        <li>A Full Guarantee On Workmanship</li>
-                                        <li>Properties at a reasonable price.</li>
+                                        <li>Custom electrical solutions</li>
+                                        <li>Licensed professionals</li>
+                                        <li>Responsive customer service</li>
+                                        <li>Guaranteed workmanship</li>
+                                        <li>Competitive pricing</li>
                                     </ul>
                                 </div>
                             </div>
@@ -162,17 +163,15 @@
         </div>
     </section>
     <!--Services Tabs-->
-    <section class="services-tabs">
+    <section id="services-tabs" class="services-tabs" data-aos="zoom-in">
         <div class="background py-6">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8">
                         <h3>Professional Main Services</h3>
-                        <p>We have extensive experience of domestic and business electrical installations and no job
-                            is
-                            too
-                            small. Our customers value our professionalism, work ethic and our competitive
-                            prices.</p>
+                        <p>We specialize in a wide range of electrical services designed to meet your needs. From
+                            commercial installations to residential repairs and industrial solutions – we have you
+                            covered.</p>
                     </div>
                 </div>
             </div>
@@ -180,29 +179,112 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 stick-out">
-
-                    <!-- Navigation Tabs (Visible on larger screens) -->
+                    <!-- Navigations tabs for PC View -->
                     <ul class="nav nav-pills d-none d-md-flex" id="service-tabs" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="commercial-tab" data-bs-toggle="pill"
                                     data-bs-target="#commercial" type="button" role="tab" aria-controls="commercial"
-                                    aria-selected="true">Commercial
+                                    aria-selected="true">
+                  <span class="icon">
+                    <img src="src/images/commercial-building.svg" class="img-fluid" alt="Commercial">
+                  </span>
+                                Commercial
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="residential-tab" data-bs-toggle="pill"
                                     data-bs-target="#residential" type="button" role="tab"
-                                    aria-controls="residential" aria-selected="false">Residential
+                                    aria-controls="residential" aria-selected="false">
+                  <span class="icon">
+                    <img src="src/images/residential-building.svg" class="img-fluid" alt="Residential">
+                  </span>
+                                Residential
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="industrial-tab" data-bs-toggle="pill"
                                     data-bs-target="#industrial" type="button" role="tab"
-                                    aria-controls="industrial" aria-selected="false">Industrial
+                                    aria-controls="industrial" aria-selected="false">
+                  <span class="icon">
+                    <img src="src/images/factory-industrial.svg" class="img-fluid" alt="Industrial">
+                  </span>
+                                Industrial
                             </button>
                         </li>
                     </ul>
-
+                    <div class="tab-content d-none d-md-flex" id="service-tabsContent">
+                        <div class="tab-pane fade show active" id="commercial" role="tabpanel"
+                             aria-labelledby="commercial-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6 order-0">
+                                        <div class="tab-content">
+                                            <h3>Commercial</h3>
+                                            <p>Electrical & Maintenance Services Ltd offers a full range of electrical
+                                                services to suit your needs – from moving a light switch to complete
+                                                house rewires.
+                                            </p>
+                                            <p>
+                                                In addition to providing fully qualified, competent electricians in and
+                                                around London, the company also runs an electrical wholesale shop.
+                                            </p>
+                                            <a class="main-btn" href="#contact-us">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 order-1">
+                                        <div class="tab-img">
+                                            <img src="src/images/services-tabs-1.png" class="img-fluid"
+                                                 alt="Commercial Service">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="residential" role="tabpanel"
+                             aria-labelledby="residential-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6 order-0">
+                                        <div class="tab-content">
+                                            <h3>Residential</h3>
+                                            <p>Our residential services range from minor repairs to complete home
+                                                rewiring, ensuring safe and efficient electrical systems for your
+                                                home.</p>
+                                            <a class="main-btn" href="#contact-us">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 order-1">
+                                        <div class="tab-img">
+                                            <img src="src/images/bw-some.png" class="img-fluid"
+                                                 alt="Residential Service">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="industrial" role="tabpanel"
+                             aria-labelledby="industrial-tab">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-6 order-0">
+                                        <div class="tab-content">
+                                            <h3>Industrial</h3>
+                                            <p>Our industrial solutions focus on large-scale electrical installations,
+                                                factory rewiring, and complex control systems with strict adherence to
+                                                safety standards.</p>
+                                            <a class="main-btn" href="#contact-us">Read More</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 order-1">
+                                        <div class="tab-img">
+                                            <img src="src/images/bw-worker.png" class="img-fluid"
+                                                 alt="Industrial Service">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Accordion (Visible on Mobile) -->
                     <div class="accordion d-md-none" id="serviceAccordion">
                         <div class="accordion-item">
@@ -221,29 +303,23 @@
                                             <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Commercial</h3>
-                                                    <p>Electrical & Maintenance Services Ltd offers a full range of
-                                                        electrical
-                                                        services Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit.
-                                                        Atque culpa fuga harum incidunt libero. Ad adipisci, eaque eos
-                                                        fugiat illo incidunt ipsa, molestias natus nisi nobis obcaecati
-                                                        provident quos, voluptates.</p>
-                                                    <a class="main-btn" href="#">Read More</a>
+                                                    <p>Our commercial services include custom electrical installations,
+                                                        energy-efficient lighting, and regular maintenance designed for
+                                                        offices, retail, and industrial facilities.</p>
+                                                    <a class="main-btn" href="#contact-us">Read More</a>
                                                 </div>
                                             </div>
                                             <div class="col-12 order-0">
                                                 <div class="tab-img">
-                                                    <img src="./src/images/services-tabs-1.png" class="img-fluid"
-                                                         alt="">
+                                                    <img src="src/images/services-tabs-1.png" class="img-fluid"
+                                                         alt="Commercial Service">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                         <div class="accordion-item">
                             <h4 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -260,25 +336,23 @@
                                             <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Residential</h3>
-                                                    <p>Electrical & Maintenance Services Ltd offers a full range of
-                                                        electrical
-                                                        services...</p>
-                                                    <a class="main-btn" href="#">Read More</a>
+                                                    <p>Our residential services range from minor repairs to complete
+                                                        home rewiring, ensuring safe and efficient electrical systems
+                                                        for your home.</p>
+                                                    <a class="main-btn" href="#contact-us">Read More</a>
                                                 </div>
                                             </div>
                                             <div class="col-12 order-0">
                                                 <div class="tab-img">
-                                                    <img src="./src/images/services-tabs-1.png" class="img-fluid"
-                                                         alt="">
+                                                    <img src="src/images/bw-some.png" class="img-fluid"
+                                                         alt="Residential Service">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                         <div class="accordion-item">
                             <h4 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -295,19 +369,16 @@
                                             <div class="col-12 order-1">
                                                 <div class="tab-content">
                                                     <h3>Industrial</h3>
-                                                    <p>Electrical & Maintenance Services Ltd offers a full range of
-                                                        electrical
-                                                        services. Lorem ipsum dolor sit amet, consectetur adipisicing
-                                                        elit. Blanditiis doloremque esse id ipsa laudantium modi nihil,
-                                                        nobis omnis pariatur rem reprehenderit, veniam? Consectetur
-                                                        consequatur dignissimos dolore dolorum! Iusto quidem, vero!</p>
-                                                    <a class="main-btn" href="#">Read More</a>
+                                                    <p>Our industrial solutions focus on large-scale electrical
+                                                        installations, factory rewiring, and complex control systems
+                                                        with strict adherence to safety standards.</p>
+                                                    <a class="main-btn" href="#contact-us">Read More</a>
                                                 </div>
                                             </div>
                                             <div class="col-12 order-0">
                                                 <div class="tab-img">
-                                                    <img src="./src/images/services-tabs-1.png" class="img-fluid"
-                                                         alt="">
+                                                    <img src="src/images/bw-worker.png" class="img-fluid"
+                                                         alt="Industrial Service">
                                                 </div>
                                             </div>
                                         </div>
@@ -316,103 +387,82 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Tab Content for PC View -->
-                    <div class="tab-content d-none d-md-flex" id="service-tabsContent">
-                        <div class="tab-pane fade show active" id="commercial" role="tabpanel"
-                             aria-labelledby="commercial-tab">
-                            <h3>Commercial</h3>
-                            <p>Electrical & Maintenance Services Ltd offers a full range of electrical
-                                services...</p>
-                            <a class="main-btn" href="#">Read More</a>
-                        </div>
-                        <div class="tab-pane fade" id="residential" role="tabpanel"
-                             aria-labelledby="residential-tab">
-                            <h3>Residential</h3>
-                            <p>Electrical & Maintenance Services Ltd offers a full range of electrical
-                                services...</p>
-                            <a class="main-btn" href="#">Read More</a>
-                        </div>
-                        <div class="tab-pane fade" id="industrial" role="tabpanel"
-                             aria-labelledby="industrial-tab">
-                            <h3>Industrial</h3>
-                            <p>Electrical & Maintenance Services Ltd offers a full range of electrical
-                                services...</p>
-                            <a class="main-btn" href="#">Read More</a>
-                        </div>
-                    </div>
+                    <!-- End Mobile Accordion -->
                 </div>
             </div>
         </div>
     </section>
     <!--Services quick list-->
-    <section class="services-list py-6">
+    <section id="services-list" class="services-list py-6" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h3>Our Services</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur, dolore ducimus
-                        laudantium modi molestias. Ad consequatur culpa ea eaque, earum eos laudantium maiores nostrum
-                        nulla omnis porro tempore, temporibus.</p>
+                    <p>We offer a comprehensive range of electrical services tailored to your needs. Explore our
+                        expertise below:</p>
                     <div class="row gap-3 gap-md-0 special-gap">
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-conditioner.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-conditioner.png"
+                                         alt="Service Icon">
+                                </div>
+                                <h4>Electrical Repairs</h4>
+                                <p>Expert troubleshooting and repair solutions to keep your electrical systems running
+                                    safely.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-electrical.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-electrical.png" alt="Service Icon">
+                                </div>
+                                <h4>Installation Services</h4>
+                                <p>Professional installation for wiring, lighting, and electrical panels in your
+                                    property.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-house.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-house.png" alt="Service Icon">
+                                </div>
+                                <h4>Lighting Solutions</h4>
+                                <p>Energy-efficient lighting design and installation to enhance your space.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-security.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-security.png" alt="Service Icon">
+                                </div>
+                                <h4>Safety Inspections</h4>
+                                <p>Comprehensive electrical safety inspections to ensure your property meets
+                                    standards.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-maintenance.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-maintenance.png" alt="Service Icon">
+                                </div>
+                                <h4>Maintenance Services</h4>
+                                <p>Regular maintenance to extend the lifespan of your electrical installations.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
                             <div class="service">
-                                <img src="./src/images/services-extension.png" alt="">
-                                <h4>Responsive</h4>
-                                <p>Fusce fermentum placerat magna ac pharetra. Aliquam euismod elit non ipsum lacinia
-                                    consectetur.</p>
-
-                                <a href="#">Read more</a>
+                                <div class="img">
+                                    <img src="src/images/services-extension.png" alt="Service Icon">
+                                </div>
+                                <h4>System Upgrades</h4>
+                                <p>Upgrading your electrical systems for improved efficiency and safety.</p>
+                                <a href="#contact-us">Read more</a>
                             </div>
                         </div>
                     </div>
@@ -421,73 +471,74 @@
         </div>
     </section>
     <!--Choose Us-->
-    <section class="choose-us py-6">
+    <section id="why-choose-us" class="choose-us py-6" data-aos="fade-up">
         <div class="container">
             <div class="row">
-                <div class="col-12 order-1 background">
+                <div class="col-12 order-1 col-md-6 order-md-0 background">
                     <div class="colored-container">
                         <ul>
-                            <li><span class="yellow">3956</span><span class="white">Projects Done</span></li>
-                            <li><span class="yellow">854</span><span class="white">People Working</span></li>
-                            <li><span class="yellow">265</span><span class="white">Business Partners</span></li>
-                            <li><span class="yellow">845+</span><span class="white">Happy Customers</span></li>
+                            <li><span class="yellow">3956</span><span class="white">Projects Completed</span></li>
+                            <li><span class="yellow">854</span><span class="white">Skilled Electricians</span></li>
+                            <li><span class="yellow">265</span><span class="white">Trusted Partners</span></li>
+                            <li><span class="yellow">845+</span><span class="white">Satisfied Clients</span></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 order-0 py-3">
-                    <h3>Few Reasons Why You Should Choose Us</h3>
-                    <p>We are offering the following information's about us that what we actually do in the electrical
-                        sector. To Improve our customers’ lives by providing creative and cost-effective solutions to
-                        their needs.</p>
-                    <ul>
-                        <li><h5>35 Years Experience</h5>
-                            <p>Effective communication is the key to success for any business. From our office staff, to
-                                our field.</p>
-                        </li>
-                        <li><h5>Excellence Certificate</h5>
-                            <p>We understand fully that your time is of extreme value. We are committed to meeting
-                                deadlines.</p>
-                        </li>
-                        <li><h5>Affordable Price</h5>
-                            <p>We adhere strictly to the current National Electrical Code, and we conduct regular
-                                in-house sessions.</p>
-                        </li>
-                    </ul>
+                <div class="col-12 order-0 col-md-6 order-md-1 py-3">
+                    <div class="text-choose">
+                        <h3>Why Choose IronHand?</h3>
+                        <p>Our commitment to excellence, extensive experience, and customer-first approach make us the
+                            right choice for your electrical needs.</p>
+                        <ul>
+                            <li>
+                                <h5>35 Years Experience</h5>
+                                <p>Our licensed professionals bring decades of expertise to every project.</p>
+                            </li>
+                            <li>
+                                <h5>Certified Quality</h5>
+                                <p>We adhere to industry standards and deliver reliable, safe electrical services.</p>
+                            </li>
+                            <li>
+                                <h5>Competitive Pricing</h5>
+                                <p>Receive top-notch electrical solutions at a price that suits your budget.</p>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!--Recent Projects-->
-    <section class="recent-projects py-6">
+    <section id="recent-projects" class="recent-projects py-6" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h3>Our Recent Orders</h3>
                     <div class="row row-cols-2 g-4">
-                        <div class="col">
+                        <div class="col col-md-3">
                             <div class="card-container">
-                                <img src="./src/images/fiber-cable.png" class="img-fluid" alt="">
-                                <h4>Fiber cable change</h4>
+                                <img src="src/images/fiber-cable.png" class="img-fluid" alt="Fiber Cable Change">
+                                <h4>Fiber Cable Change</h4>
                                 <p>Commercial</p>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col col-md-3">
                             <div class="card-container">
-                                <img src="./src/images/industry-issue.png" class="img-fluid" alt="">
-                                <h4>Industry machine issue</h4>
-                                <p>Industry</p>
+                                <img src="src/images/industry-issue.png" class="img-fluid" alt="Industry Machine Issue">
+                                <h4>Industry Machine Issue</h4>
+                                <p>Industrial</p>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col col-md-3">
                             <div class="card-container">
-                                <img src="./src/images/whell-change.png" class="img-fluid" alt="">
+                                <img src="src/images/whell-change.png" class="img-fluid" alt="Wheel Alloy Change">
                                 <h4>Wheel Alloy Change</h4>
                                 <p>Residential</p>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col col-md-3">
                             <div class="card-container">
-                                <img src="./src/images/roof-cleaning.png" class="img-fluid" alt="">
+                                <img src="src/images/roof-cleaning.png" class="img-fluid" alt="Roof Cleaning">
                                 <h4>Roof Cleaning</h4>
                                 <p>Commercial</p>
                             </div>
@@ -498,10 +549,10 @@
         </div>
     </section>
     <!--Contact Us-->
-    <section class="contact-us py-6">
+    <section id="contact-us" class="contact-us py-6" data-aos="fade-up">
         <div class="container">
-            <div class="row gap-5">
-                <div class="col-12">
+            <div class="row gap-5 gap-md-0">
+                <div class="col-12 col-md-6">
                     <div class="testimonials">
                         <h3>Customers Say</h3>
                         <div id="carouselTesti" class="carousel slide" data-bs-interval="false">
@@ -510,20 +561,18 @@
                                     <div class="row">
                                         <div class="col-12 upp-part">
                                             <div class="person">
-                                                <img src="./src/images/woman.png" class="d-block" alt="...">
+                                                <img src="src/images/woman.png" class="d-block" alt="Client 1">
                                                 <div class="info">
-                                                    <h4>King Von</h4>
+                                                    <h4>Adriana Esta</h4>
                                                     <span>NYC</span>
                                                 </div>
                                             </div>
-                                            <img src="./src/images/quote-icon.svg" alt="">
+                                            <img src="src/images/quote-icon.svg" alt="Quote Icon">
                                         </div>
                                         <div class="col-12 lowr-part">
-                                            <p class="quote">We have had several good experiences with
-                                                <span> Blue Collar</span> team.
-                                                Most recently,
-                                                they replaced our 20-year-old HVAC system with a <span>new, modern, and more
-                                            efficient</span> system & it worked fine. </p>
+                                            <p class="quote">We have had several great experiences with the IronHand
+                                                team. They replaced our outdated system with a modern, efficient
+                                                solution.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -531,20 +580,17 @@
                                     <div class="row">
                                         <div class="col-12 upp-part">
                                             <div class="person">
-                                                <img src="./src/images/woman.png" class="d-block" alt="...">
+                                                <img src="src/images/testimonials-2.png" class="d-block" alt="Client 2">
                                                 <div class="info">
-                                                    <h4>Nancy Luter</h4>
+                                                    <h4>Sung Won</h4>
                                                     <span>NYC</span>
                                                 </div>
                                             </div>
-                                            <img src="./src/images/quote-icon.svg" alt="">
+                                            <img src="src/images/quote-icon.svg" alt="Quote Icon">
                                         </div>
                                         <div class="col-12 lowr-part">
-                                            <p class="quote">We have had several good experiences with
-                                                <span> Blue Collar</span> team.
-                                                Most recently,
-                                                they replaced our 20-year-old HVAC system with a <span>new, modern, and more
-                                            efficient</span> system & it worked fine. </p>
+                                            <p class="quote">IronHand provided excellent service on our home renovation
+                                                project. Their professionalism is unmatched.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -552,20 +598,17 @@
                                     <div class="row">
                                         <div class="col-12 upp-part">
                                             <div class="person">
-                                                <img src="./src/images/woman.png" class="d-block" alt="...">
+                                                <img src="src/images/testimonials.png" class="d-block" alt="Client 3">
                                                 <div class="info">
-                                                    <h4>Nancy Luter</h4>
+                                                    <h4>Won Jun Ho</h4>
                                                     <span>NYC</span>
                                                 </div>
                                             </div>
-                                            <img src="./src/images/quote-icon.svg" alt="">
+                                            <img src="src/images/quote-icon.svg" alt="Quote Icon">
                                         </div>
                                         <div class="col-12 lowr-part">
-                                            <p class="quote">We have had several good experiences with
-                                                <span> Blue Collar</span> team.
-                                                Most recently,
-                                                they replaced our 20-year-old HVAC system with a <span>new, modern, and more
-                                            efficient</span> system & it worked fine. </p>
+                                            <p class="quote">Their innovative solutions transformed our industrial
+                                                plant. We highly recommend their services.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -585,35 +628,23 @@
                         </div>
                     </div>
                     <div class="question-box">
-                        <h3>99.9% Customer Satisfaction Based</h3>
-                        <p>If you have any questions or need help contact with our team, or call</p>
+                        <h3>99.9% Customer Satisfaction</h3>
+                        <p>If you have any questions or need assistance, feel free to contact our team anytime.</p>
                         <div class="call-box">
-                            <span>  <i class="bi bi-telephone"></i></span>
-                            <p>(003) 123 456 7890</p>
+                            <span><i class="bi bi-telephone"></i></span>
+                            <p>(555) 123-4567</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 appt-form">
-                    <h3>
-                        Appointment Form
-                    </h3>
+                <div class="col-12 col-md-6 appt-form">
+                    <h3>Appointment Form</h3>
                     <div class="form-container">
                         <form>
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Your name">
-                            </div>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" placeholder="Your email">
-                            </div>
-                            <div class="mb-3">
-                                <input type="tel" class="form-control" placeholder="Phone Number">
-                            </div>
-                            <div class="mb-3">
-                                <input type="date" class="form-control">
-                            </div>
-                            <div class="mb-3">
-                                <textarea class="form-control" rows="3" placeholder="Service Description"></textarea>
-                            </div>
+                            <input type="text" class="form-control" placeholder="Your name">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                            <input type="date" class="form-control">
+                            <textarea class="form-control" rows="3" placeholder="Service Description"></textarea>
                             <div class="d-grid">
                                 <button type="submit" class="main-btn">Submit</button>
                             </div>
@@ -624,100 +655,115 @@
         </div>
     </section>
     <!--Pricing-->
-    <section class="pricing py-6">
+    <section id="pricing" class="pricing py-6" data-aos="fade-up">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="heading-group">
-                        <h3>Let’s Customize Work With Affordable Price</h3>
-                        <p>This is passionate about delivering growth and the new possibilities in the field of
-                            electrical services. We have extensive experience of domestic and business electrical
-                            installations and no job is too small.</p>
+                        <div class="row gap-3 gap-md-0">
+                            <div class="col-md-6">
+                                <h3>Let’s Customize Work With Affordable Prices</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Our flexible pricing options ensure you receive high-quality electrical services that
+                                    fit your project and budget.</p>
+                            </div>
+                        </div>
                     </div>
                     <div class="price-cols">
                         <div class="container">
-                            <div class="row gap-5">
-                                <div class="col-12 price-option">
+                            <div class="row gap-5 gap-md-2 gap-lg-0 justify-content-md-center justify-content-lg-between align-items-stretch">
+                                <div class="col-12 col-md-4a5 col-lg-3a5 price-option">
+                                    <div class="plan-name">
+                                        <h5>Basic</h5>
+                                    </div>
                                     <div class="price-heading">
-                                        <h4>$ 599.00</h4>
+                                        <div class="price">
+                                            <h4>$599.00</h4>
+                                        </div>
                                         <div class="extras">
                                             <span>Per Visit Charge</span>
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>Electrical Service</li>
-                                        <li>Distribution Power Systems</li>
-                                        <li>High & Medium Voltages</li>
-                                        <li>Industrial Control Systems</li>
-                                        <li>Switch Installation</li>
-                                        <li>Generator Installations</li>
-                                        <li>Innovative Construction</li>
-                                        <a class="main-btn" href="#">Buy Now</a>
-
+                                        <li>Electrical Repairs</li>
+                                        <li>Lighting Fixes</li>
+                                        <li>Routine Maintenance</li>
+                                        <li>Emergency Diagnostics</li>
+                                        <li>Standard Installations</li>
+                                        <a class="main-btn" href="#contact-us">Buy Now</a>
                                     </ul>
                                 </div>
-                                <div class="col-12 price-option">
+                                <div class="col-12 col-md-4a5 col-lg-3a5 price-option">
+                                    <div class="plan-name">
+                                        <h5>Standard Plan</h5>
+                                    </div>
                                     <div class="price-heading">
-                                        <h4>$ 699.00</h4>
+                                        <div class="price">
+                                            <h4>$699.00</h4>
+                                        </div>
                                         <div class="extras">
                                             <span class="badge">Popular</span>
                                             <span>Per Visit Charge</span>
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>PLC Controls</li>
-                                        <li>Conveyor systems</li>
-                                        <li>Wiring renovations</li>
-                                        <li>Electric Water Heater Repair</li>
-                                        <li>Service And Panel Upgrades</li>
-                                        <li>Efficient Lighting Solutions</li>
-                                        <li>Site lighting</li>
-                                        <a class="main-btn" href="#">Buy Now</a>
-
+                                        <li>Advanced Installations</li>
+                                        <li>Custom Lighting Solutions</li>
+                                        <li>Enhanced Safety Checks</li>
+                                        <li>Panel Upgrades</li>
+                                        <li>Energy Audits</li>
+                                        <a class="main-btn" href="#contact-us">Buy Now</a>
                                     </ul>
                                 </div>
-                                <div class="col-12 price-option">
+                                <div class="col-12 col-md-4a5 col-lg-3a5 price-option">
+                                    <div class="plan-name">
+                                        <h5>Professional</h5>
+                                    </div>
                                     <div class="price-heading">
-                                        <h4>$ 799.00</h4>
+                                        <div class="price">
+                                            <h4>$799.00</h4>
+                                        </div>
                                         <div class="extras">
                                             <span>Per Visit Charge</span>
                                         </div>
                                     </div>
                                     <ul>
-                                        <li>Cable Tray Installations</li>
-                                        <li>Wiring Upgrades</li>
-                                        <li>Energy Efficient Lighting</li>
-                                        <li>Emergency Generating</li>
-                                        <li>Pools And Hot Tubs</li>
-                                        <li>Air Conditioning Units</li>
-                                        <li>Generating Systems</li>
-                                        <a class="main-btn" href="#">Buy Now</a>
+                                        <li>System Overhauls</li>
+                                        <li>Industrial Wiring</li>
+                                        <li>Smart Home Integration</li>
+                                        <li>Priority Service</li>
+                                        <li>Full Project Management</li>
+                                        <a class="main-btn" href="#contact-us">Buy Now</a>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="details">
-                        <div class="detail">
-                            <div class="icon">
-                                <img src="./src/images/tick.svg" class="img-fluid" alt="">
+                        <div class="row gap-3 gap-md-0">
+                            <div class="col-md-6">
+                                <div class="detail">
+                                    <div class="icon">
+                                        <img src="src/images/tick.svg" class="img-fluid" alt="Tick">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Affordable</h4>
+                                        <p>We offer competitive pricing while ensuring top-quality service for every
+                                            project.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content">
-                                <h4>Affordable</h4>
-                                <p>We adhere strictly to the current National Electrical Code, and we conduct regular
-                                    in-house sessions with our technicians to review any code changes and
-                                    applications.</p>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <div class="icon">
-                                <img src="./src/images/tick.svg" class="img-fluid" alt="">
-                            </div>
-                            <div class="content">
-                                <h4>Fixed Plan</h4>
-                                <p>We understand fully that your time is of extreme value. You will never have to worry
-                                    about waiting around for our trained technicians.24/7 Service Providers Affordable
-                                    Price.</p>
+                            <div class="col-md-6">
+                                <div class="detail">
+                                    <div class="icon">
+                                        <img src="src/images/tick.svg" class="img-fluid" alt="Tick">
+                                    </div>
+                                    <div class="content">
+                                        <h4>Fixed Plan</h4>
+                                        <p>Our fixed-rate service plans ensure transparent costs with no surprises.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -726,117 +772,126 @@
         </div>
     </section>
     <!--Newsletter-->
-    <section class="newsletter py-6">
+    <section id="newsletter" class="newsletter py-6" data-aos="fade-up">
         <div class="container">
-            <div class="row gap-3">
-                <div class="col-12">
+            <div class="row gap-3 gap-md-0">
+                <div class="col-12 col-md-6">
                     <h3>Subscribe To Our Newsletter</h3>
-                    <p>Stay in touch with us to get latest news. We are here to fit the needs of your electrical
-                        services for your dream building.</p>
+                    <p>Stay up-to-date with the latest in electrical technology, exclusive offers, and company news.</p>
                 </div>
-                <div class="col-12">
-                    <form>
-                        <div class="grouped">
-                            <input type="email" class="form-control" placeholder="Input your email">
-                            <button type="submit" class="main-btn alternate">Subscribe</button>
-                        </div>
-                    </form>
+                <div class="col-12 col-md-6">
+                    <div class="form-cont">
+                        <form>
+                            <div class="grouped">
+                                <input type="email" class="form-control" placeholder="Input your email">
+                                <button type="submit" class="main-btn alternate">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </main>
 <!--Footer-->
-<footer class="footer">
+<footer class="footer py-3">
     <div class="container">
         <!-- Top Row -->
-        <div class="row text-center text-md-start">
-            <div class="col-12 company-name">
-                <a href="#">
-                    <img src="./src/images/logo.png" alt="Company Logo">
+        <div class="row text-center text-md-start upper-row">
+            <div class="col-12 col-lg-3 company-name">
+                <a href="#home">
+                    <img src="src/images/logo.png" alt="Company Logo">
                     <h4 class="logo-text"><span>Iron</span>Hand</h4>
                 </a>
             </div>
-            <div class="col-12 contact-info">
-                <h6 class="md-d-none">Contact us</h6>
-                <div class="row text-center">
-                    <div class="col-12">
+            <div class="col-12 col-lg-9 contact-info">
+                <h6 class="d-md-none">Contact Us</h6>
+                <div class="row gap-md-1">
+                    <div class="col-12 col-md-4a5">
                         <div class="info-piece">
-                            <div class="icon-box me-2 d-none">
+                            <div class="icon-box me-2 d-none d-md-flex">
                                 <i class="bi bi-envelope fs-6"></i>
                             </div>
                             <div class="text-block">
-                                <h6 class="d-none">Mail Us</h6>
-                                <p class="mb-0">info@bluecollar.com</p>
+                                <h6 class="d-none d-md-block">Email</h6>
+                                <p class="mb-0">contact@ironhand.com</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-4a5">
                         <div class="info-piece">
-                            <div class="icon-box me-2 d-none">
+                            <div class="icon-box me-2 d-none d-md-flex">
                                 <i class="bi bi-telephone"></i>
                             </div>
                             <div class="text-block">
-                                <h6 class="d-none">Call Us</h6>
-                                <p class="mb-0">+01 569 896 654</p>
+                                <h6 class="d-none d-md-block">Phone</h6>
+                                <p class="mb-0">+1 (347) 908-543</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-4a5">
                         <div class="info-piece">
-                            <div class="icon-box me-2 d-none">
+                            <div class="icon-box me-2 d-none d-md-flex">
                                 <i class="bi bi-geo-alt"></i>
                             </div>
                             <div class="text-block">
-                                <h6 class="d-none">Location</h6>
-                                <p class="mb-0">Amsterdam, 109-74</p>
+                                <h6 class="d-none d-md-block">Location</h6>
+                                <p class="mb-0">New York, NY 07008</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- Middle Row -->
-        <div class="row">
-            <div class="col-12 d-flex flex-column">
-                <div class="social-text d-none order-1">
-                    <p>We are here to fit the needs of your basic services for your dream building whether it's a
-                        commercial, residential or industry.</p>
+        <div class="row g-md-0 quick-links">
+            <div class="col-12 col-md-6 d-flex flex-column social-mix">
+                <div class="social-text d-none d-md-block order-1 order-md-0">
+                    <p>We are dedicated to providing dependable electrical services for residential, commercial, and
+                        industrial needs.</p>
                 </div>
-                <div class="social-icons order-0">
+                <div class="social-icons order-0 order-md-1">
                     <a href="#"><i class="bi bi-instagram"></i></a>
                     <a href="#"><i class="bi bi-facebook"></i></a>
                     <a href="#"><i class="bi bi-twitter"></i></a>
                 </div>
             </div>
-            <div class="col-12">
+            <div class="col-12 col-md-6 links-nav">
                 <div class="extra-links m-auto">
                     <div class="row">
                         <div class="col-6 order-1 mb-3">
                             <h6>Explore</h6>
                             <ul class="list-unstyled">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Team</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li><a href="#about-us">About Us</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                                <li><a href="#contact-us">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="col-6 order-0 mb-3">
                             <h6>Quick Links</h6>
                             <ul class="list-unstyled">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Services</a></li>
-                                <li><a href="#">Service Single</a></li>
-                                <li><a href="#">Projects</a></li>
-                                <li><a href="#">Projects Single</a></li>
+                                <li class="nav-item">
+                                    <a href="#home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#about-us">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#services-tabs">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#recent-projects">Projects</a>
+                                </li>
+                                <li class="nav-item mob-btn-style">
+                                    <a href="#contact-us">Contact Us</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="mid-line"></div>
     </div>
 </footer>
 </body>
