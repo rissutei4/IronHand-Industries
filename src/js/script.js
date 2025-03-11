@@ -1,11 +1,12 @@
 const headerOpenIcon = document.querySelector('.burgerIcon');
 const burgerIconLines = document.querySelectorAll('.burgerIcon .line');
 const menuContainer = document.querySelector('.nav-content');
+const menuContainerLi = document.querySelectorAll('.nav-content li');
 const headerParent = document.querySelector('header');
 const brandContainer = document.querySelector('.change-bg');
 const body = document.querySelector('body');
 
-headerOpenIcon.addEventListener('click', () => {
+const toggleMenu = function () {
     menuContainer.classList.toggle('d-none');
     menuContainer.classList.toggle('open-menu-container');
     headerParent.classList.toggle('open-menu-container');
@@ -14,7 +15,15 @@ headerOpenIcon.addEventListener('click', () => {
     burgerIconLines.forEach(line => {
         line.classList.toggle("open-menu-container");
     });
-})
+};
+
+// Attach event listener once
+headerOpenIcon.addEventListener('click', toggleMenu);
+
+// Close menu when clicking any menu item
+menuContainerLi.forEach(item => {
+    item.addEventListener('click', toggleMenu);
+});
 window.addEventListener("scroll", function () {
     // You can adjust the threshold value as needed
     if (window.scrollY > 100) {
