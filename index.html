@@ -19,6 +19,7 @@
     <!-- AOS JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
     <script defer src="src/js/script.js"></script>
+    <script defer src="src/js/form-submission.js"></script>
 </head>
 <body>
 <!--Header-->
@@ -639,16 +640,44 @@
                 <div class="col-12 col-md-6 appt-form">
                     <h3>Appointment Form</h3>
                     <div class="form-container">
-                        <form>
-                            <input type="text" class="form-control" placeholder="Your name">
-                            <input type="email" class="form-control" placeholder="Your email">
-                            <input type="tel" class="form-control" placeholder="Phone Number">
-                            <input type="date" class="form-control">
-                            <textarea class="form-control" rows="3" placeholder="Service Description"></textarea>
+                        <form id="order-form" action="https://api.web3forms.com/submit" method="POST"
+                              onsubmit="return validateForm()">
+                            <input type="hidden" name="access_key" id="access_key"/>
+
+                            <div class="form-group">
+                                <input type="text" id="nameInput" class="form-control" placeholder="Your name">
+                                <div id="nameError" class="invalid-feedback" style="display:none;">
+                                    Please enter your full name (at least two words).
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="email" id="emailInput" class="form-control" placeholder="Your email">
+                                <div id="emailError" class="invalid-feedback" style="display:none;">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="tel" id="phoneInput" class="form-control" placeholder="Phone Number">
+                                <div id="phoneError" class="invalid-feedback" style="display:none;">
+                                    Please enter a valid phone number.
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="date" placeholder="Pick the date" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Service Description"></textarea>
+                            </div>
+
                             <div class="d-grid">
                                 <button type="submit" class="main-btn">Submit</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>

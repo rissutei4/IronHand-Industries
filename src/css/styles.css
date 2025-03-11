@@ -692,6 +692,9 @@ main .contact-us .appt-form .form-container form input, main .contact-us .appt-f
   border-radius: 0;
   border: 1px solid #AAAAAA;
 }
+main .contact-us .appt-form .form-container form input.is-invalid {
+  border: 1px solid red;
+}
 main .pricing {
   background-color: #EFEFEF;
 }

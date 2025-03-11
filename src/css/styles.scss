@@ -751,6 +751,9 @@ main {
             border-radius: 0;
             border: 1px solid $light-gray-3;
           }
+          input.is-invalid {
+            border: 1px solid red;
+          }
         }
       }
     }
