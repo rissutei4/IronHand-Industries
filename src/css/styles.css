@@ -929,6 +929,72 @@ footer .extra-links ul li a:hover {
   color: #AAAAAA;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+#overlay.hidden {
+  display: none;
+}
+
+.popup {
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  min-height: 20%;
+  height: auto;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.popup.hidden {
+  display: none;
+}
+.popup .popup-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* Close Button */
+}
+.popup .popup-content h3 {
+  color: #3B4C63;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.popup .popup-content p {
+  color: #888888;
+  font-size: 1rem;
+}
+.popup .popup-content .close-btn {
+  display: block;
+  width: 3rem;
+  margin-left: auto;
+  color: #3B4C63;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup .popup-content .close-btn i:before {
+  font-size: 2rem;
+}
+.popup .popup-content .close-btn:hover {
+  color: #BFA18A;
+}
+
 @media only screen and (min-width: 750px) {
   header .header-brand .logo-block {
     display: flex;

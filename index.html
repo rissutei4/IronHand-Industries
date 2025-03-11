@@ -645,21 +645,24 @@
                             <input type="hidden" name="access_key" id="access_key"/>
 
                             <div class="form-group">
-                                <input type="text" id="nameInput" class="form-control" placeholder="Your name" name="Full Name">
+                                <input type="text" id="nameInput" class="form-control" placeholder="Your name"
+                                       name="Full Name">
                                 <div id="nameError" class="invalid-feedback" style="display:none;">
                                     Please enter your full name (at least two words).
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <input type="email" id="emailInput" class="form-control" placeholder="Your email" name="Email Address">
+                                <input type="email" id="emailInput" class="form-control" placeholder="Your email"
+                                       name="Email Address">
                                 <div id="emailError" class="invalid-feedback" style="display:none;">
                                     Please enter a valid email address.
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <input type="tel" id="phoneInput" class="form-control" placeholder="Phone Number" name="Phone Number">
+                                <input type="tel" id="phoneInput" class="form-control" placeholder="Phone Number"
+                                       name="Phone Number">
                                 <div id="phoneError" class="invalid-feedback" style="display:none;">
                                     Please enter a valid phone number.
                                 </div>
@@ -670,7 +673,8 @@
                             </div>
 
                             <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Service Description" name="description"></textarea>
+                                <textarea class="form-control" rows="3" placeholder="Service Description"
+                                          name="description"></textarea>
                             </div>
 
                             <div class="d-grid">
@@ -923,5 +927,16 @@
         <div class="mid-line"></div>
     </div>
 </footer>
+
+<!--Contact form pop up-->
+<div id="overlay" class="hidden"></div>
+<div id="popup-message" class="popup hidden">
+    <div class="popup-content">
+                <span class="close-btn"><i class="bi bi-x"></i>
+                </span>
+        <h3 id="popup-title"></h3>
+        <p id="popup-message-content"></p>
+    </div>
+</div>
 </body>
 </html>

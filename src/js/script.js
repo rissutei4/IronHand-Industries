@@ -1,10 +1,10 @@
+"use strict";
 const headerOpenIcon = document.querySelector('.burgerIcon');
 const burgerIconLines = document.querySelectorAll('.burgerIcon .line');
 const menuContainer = document.querySelector('.nav-content');
 const menuContainerLi = document.querySelectorAll('.nav-content li');
 const headerParent = document.querySelector('header');
 const brandContainer = document.querySelector('.change-bg');
-const body = document.querySelector('body');
 
 const toggleMenu = function () {
     menuContainer.classList.toggle('d-none');
