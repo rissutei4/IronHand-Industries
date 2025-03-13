@@ -43,11 +43,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-}
-
 article > * + * {
   margin-top: 1em;
 }
@@ -248,7 +243,7 @@ header .nav-content.open-menu-container a p {
 }
 
 main .hero {
-  background-image: url("../images/hero-img.png");
+  background-image: url("https://res.cloudinary.com/dtntxfdf6/image/upload/f_auto,q_auto/v1741810398/hero-img_obiqyz.png");
   height: 80vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -447,7 +442,7 @@ main .choose-us .background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 80%;
-  background-image: url("../images/choose-us.jpg");
+  background-image: url("https://res.cloudinary.com/dtntxfdf6/image/upload/f_auto,q_auto/v1741810398/choose-us_zrhc3i.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -588,6 +583,11 @@ main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .u
 }
 main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part .person span {
   color: #888888;
+}
+main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .upp-part img {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
 }
 main .contact-us .testimonials .carousel.slide .carousel-inner .carousel-item .lowr-part {
   padding: 1rem 0;

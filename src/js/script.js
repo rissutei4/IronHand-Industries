@@ -7,6 +7,7 @@ const headerParent = document.querySelector('header');
 const brandContainer = document.querySelector('.change-bg');
 
 const toggleMenu = function () {
+    if (window.innerWidth >= 500) return;
     menuContainer.classList.toggle('d-none');
     menuContainer.classList.toggle('open-menu-container');
     headerParent.classList.toggle('open-menu-container');

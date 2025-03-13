@@ -207,7 +207,7 @@ header {
 
 main {
   .hero {
-    background-image: url("../images/hero-img.png");
+    background-image: url("https://res.cloudinary.com/dtntxfdf6/image/upload/f_auto,q_auto/v1741810398/hero-img_obiqyz.png");
     height: 80vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -455,7 +455,7 @@ main {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 80%;
-      background-image: url("../images/choose-us.jpg");
+      background-image: url("https://res.cloudinary.com/dtntxfdf6/image/upload/f_auto,q_auto/v1741810398/choose-us_zrhc3i.jpg");
       display: flex;
       align-items: center;
       justify-content: center;
@@ -624,6 +624,11 @@ main {
                 span {
                   color: $medium-gray;
                 }
+              }
+              img{
+                display: block;
+                width: 3.5rem;
+                height: 3.5rem;
               }
             }
 
